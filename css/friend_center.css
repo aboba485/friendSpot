@@ -1,0 +1,237 @@
+html, body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C; /* Темно-серый фон */
+    color: #E0E0E0; /* Светло-серый текст */
+}
+
+.container {
+    width: 300px;
+    height: 630px; /* Фиксированная высота */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2C2C2C; /* Темный фон контейнера */
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* Для позиционирования .footer */
+}
+
+.description {
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 10px;
+    color: #E0E0E0;
+}
+
+.rapper {
+    padding-top: 1px; /* Увеличиваем padding-top для опускания содержимого на 15 пикселей */
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #4FC3F7; /* Ярко-синий цвет */
+}
+
+.search-bar {
+    width: 80%;
+    padding: 5px;
+    margin: 35px 0 5px 0; /* Сдвигаем вниз на 15 пикселей */
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #333333; /* Темный фон поля поиска */
+    color: #E0E0E0; /* Светлый текст */
+    padding-right: 40px; /* Добавляем место для иконки */
+    background-image: url('images/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Иконка справа */
+    background-size: 20px; /* Размер иконки */
+}
+
+.bondmen-list {
+    text-align: left;
+    max-height: 240px; /* Фиксированная высота для контейнера с заданиями на 5 заданий */
+    overflow-y: auto; /* Включаем вертикальную прокрутку */
+}
+
+/* Скрываем полосу прокрутки */
+.bondmen-list::-webkit-scrollbar {
+    display: none;
+}
+
+.bondmen-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.bondmen-list {
+    max-height: 240px;
+    overflow-y: auto;
+}
+
+.bondman {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer; /* Добавляем указатель курсора при наведении */
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Сохраняет пропорции изображения */
+}
+
+.bondman p {
+    margin: 0;
+    color: #E0E0E0; /* Светлый текст */
+}
+
+.bondman p:first-child {
+    font-weight: bold;
+}
+
+.bondman p:last-child {
+    font-size: 12px; /* Увеличиваем размер текста */
+}
+
+.price {
+    display: flex;
+    align-items: center; 
+    margin-left: auto; /* Смещаем блок цены вправо */
+}
+
+.price p {
+    margin: 0 5px 0 0;
+    color: #E0E0E0;
+    font-size: 16px; /* Example font size for the price */
+}
+
+.ton-icon {
+    width: 30px; /* Matches the font size */
+    height: 30px; /* Matches the font size */
+    vertical-align: middle; /* Ensures the icon aligns with the text */
+    margin-bottom: 4px;
+}
+
+.main-menu-button {
+    background-color: #303F9F;
+    border: none;
+    border-radius: 5px;
+    height: 50px; /* Высота для соответствия с кнопками на главной странице */
+    width: 80px; /* Ширина для соответствия с кнопками на главной странице */
+    cursor: pointer;
+    display: inline-block;
+    position: absolute;
+    bottom: 20px; /* Устанавливаем нижний отступ для подъема кнопок */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.main-menu-button::before {
+    content: '';
+    display: inline-block;
+    width: 20px; /* Ширина прямоугольника */
+    height: 10px; /* Высота прямоугольника */
+    background-color: white;
+    border-radius: 3px; /* Закругленные углы */
+    margin: 20px auto; /* Центрируем прямоугольник */
+}
+
+/* Popup styles */
+.popup {
+    margin-bottom: 240px;
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: calc(100% + 200px); /* Full height plus 200px */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+.popup-content {
+    background-color: #2C2C2C;
+    margin: calc(15% + 100px) auto; /* 15% from the top minus 100px and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover; /* Сохраняет пропорции изображения */
+}
+
+.popup-content p {
+    margin: 10px 0;
+    color: #E0E0E0; /* Светлый текст */
+}
+
+.popup-price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.popup-price p {
+    margin: 0 5px 0 0;
+    color: #E0E0E0;
+    font-size: 16px; /* Example font size for the price */
+}
+
+.popup-price .ton-icon {
+    width: 30px; /* Matches the font size */
+    height: 30px; /* Matches the font size */
+    vertical-align: middle; /* Ensures the icon aligns with the text */
+    margin-bottom: 4px;
+}
+
+.buy-button {
+    background-color: #303F9F;
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 100px;
+    cursor: pointer;
+    color: white;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

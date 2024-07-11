@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Friend Center</title>
+    <link rel="stylesheet" href="css/friend_center.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Friend Center</h1>
+        <div class="description">
+            <p>Buy and sell friends using TON!</p>
+        </div>
+        <div class="rapper">
+            <div class="header">
+                <input type="text" placeholder="Search" class="search-bar" id="searchInput">
+            </div>
+            <div class="bondmen-container">
+                <h2>Bondmen to Buy</h2>
+                <div class="bondmen-list" id="bondmenList">
+                    <!-- Existing bondmen here -->
+                </div>
+            </div>
+        </div>
+        <button class="main-menu-button" onclick="window.location.href='index.html'"></button>
+    </div>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <img src="" alt="User avatar" class="popup-avatar" id="popupAvatar">
+            <p id="popupUsername"></p>
+            <p id="popupHandle"></p>
+            <div class="popup-price">
+                <p id="popupPrice"></p>
+                <img src="images/ton.png" alt="TON icon" class="ton-icon">
+            </div>
+            <button class="buy-button">Buy</button>
+        </div>
+    </div>
+    <script src="js/friend_center.js"></script>
+    <script src="js/load_items.js"></script> <!-- Add this line -->
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Telegram Mini App</title>
+    <link rel="stylesheet" href="css/main_menu.css">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="profile title_rapper">
+            <img src="images/profilePic1.png" alt="User's profile photo" class="profile-photo" id="profilePhoto">
+            <p class="username" id="username">UserName</p>
+        </div>
+        <div class="rapper">
+            <div class="search">
+                <input type="text" placeholder="Search" class="search-bar" id="searchInput">
+            </div>
+            <div class="bondmen-container">
+                <div class="title_rapper">
+                    <h2>Your Bondmen</h2>
+                </div>
+                <div class="bondmen-list" id="bondmenList">
+                    <!-- Bondmen will be dynamically loaded here -->
+                </div>
+                <p id="noResults" style="display: none;">No tokens found</p>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="nav-button" onclick="window.location.href='friend_quest.html'">◀</button>
+            <button class="nav-button" onclick="window.location.href='friend_center.html'">▶</button>
+        </div>
+    </div>
+    <script src="js/main_page.js"></script>
+</body>
+</html>
+<!-- Bondmen will be dynamically loaded here -->

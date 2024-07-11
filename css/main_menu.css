@@ -1,0 +1,119 @@
+html, body {
+    overflow: hidden; /* Prevent scrolling on the main page */
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C; /* Dark gray background */
+    color: #E0E0E0; /* Light gray text */
+}
+
+.container {
+    width: 300px;
+    height: 630px; /* Fixed height */
+    margin: 0 auto;
+    text-align: center;
+    background-color: #2C2C2C; /* Dark background */
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* For positioning .footer */
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover; /* Preserve image proportions */
+    margin-top: 15px;
+}
+
+.username {
+    font-size: 24px;
+    margin-top: 0px; /* Lift UserName by 30 pixels */
+    margin-bottom: 10px;
+    color: #4FC3F7; /* Bright blue for username */
+}
+
+.search-bar {
+    width: 80%;
+    padding: 5px;
+    margin: 20px 0;
+    border: 1px solid #555555;
+    border-radius: 5px;
+    background-color: #333333; /* Dark background for search field */
+    color: #E0E0E0; /* Light text */
+    padding-right: 40px; /* Space for icon */
+    background-image: url('images/search-icon.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Icon on the right */
+    background-size: 20px; /* Icon size */
+}
+
+.bondmen-container {
+    min-height: 250px; /* Minimum height to prevent button shifting */
+    padding-bottom: 70px; /* Padding to lift buttons by 30 pixels */
+    margin-top: -15px; /* Lift bondmen by 15 pixels */
+}
+
+.bondmen-list {
+    text-align: left;
+    max-height: 240px; /* Set height for scrolling */
+    overflow-y: auto; /* Scrolling if elements don't fit */
+}
+
+.bondmen-list::-webkit-scrollbar {
+    display: none;
+}
+
+.bondmen-list {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.bondman {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover; /* Preserve image proportions */
+}
+
+.bondman p {
+    margin: 0;
+    color: #E0E0E0; /* Light text */
+}
+
+.bondman p:first-child {
+    font-weight: bold;
+}
+
+.bondman p:last-child {
+    font-size: 12px; /* Increase text size */
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 20px; /* Bottom margin to lift buttons */
+    left: 0;
+    right: 0;
+}
+
+.nav-button {
+    font-size: 24px;
+    background-color: #303F9F; /* Dark blue background for buttons */
+    color: #FFFFFF; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
